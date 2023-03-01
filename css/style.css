@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background: rgb(142, 181, 231);
+    color: white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo_header img {
+    width: 50px;
+    height: 50px;
+}
+
+.menu {
+    width: 250px;
+    height: 50px;
+}
+
+.menu ul {
+    width: 250px;
+    height: 50px;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu ul li {
+    width: 120px;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu ul li>ul {
+    position: absolute;
+    height: auto;
+    width: 300px;
+    top: 50px;
+    left: 0;
+    display: none;
+    background: rgb(142, 181, 231);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.menu ul li>ul li {
+    width: 300px;
+    display: flex;
+    justify-content: left;
+}
+
+.menu ul li:hover>ul {
+    display: block;
+}
+
+.menu ul li:hover {
+    background: rgb(35, 118, 212);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+
+}
+
+.fa-angle-down {
+    margin-left: 5px;
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 30px;
+}
+
+.search {
+    position: absolute;
+    right: 500px;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    color: black;
+    padding: 7px;
+}
+
+.user {
+    position: absolute;
+    right: 100px;
+}
+
+.fa-user {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.fa-bell {
+    font-size: 25px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.detail_project {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+
+    background-color: rgb(238, 238, 238);
+    height: 500px;
+    width: 100vw;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+.Project  {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+
+    background-color: rgb(238, 238, 238);
+    height: 500px;
+    width: 100vw;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.Project tr {
+    height: 45px;
+    
+}
+.Project .sub{
+    width: 220px;
+    height: 30px;
+    margin-left: 300px;
+    margin-top: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.document {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+
+    background-color:  rgb(238, 238, 238);
+    height: 500px;
+    width: 100vw;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.tvDepartment{
+    position: absolute;
+    top: 100px;
+    left: 450px;
+
+    background-color:  rgb(238, 238, 238);
+    height: 500px;
+    width: 100vw;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.work_list {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+
+    background-color: rgb(238, 238, 238);
+    height: 500px;
+    width: 100vw;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.themTV{
+    position: absolute;
+    top: 100px;
+    left: 450px;
+
+    background-color: rgb(238, 238, 238);
+    height: 500px;
+    width: 100vw;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+.themDoc{
+    position: absolute;
+    top: 100px;
+    left: 450px;
+
+    background-color: rgb(238, 238, 238);
+    height: 500px;
+    width: 100vw;
+    padding-left: 40px;
+    padding-top: 30px;
+}
