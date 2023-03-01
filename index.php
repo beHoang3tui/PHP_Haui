@@ -17,7 +17,6 @@
     <?php 
         include("./includes/common.php");
         include("./pages/menu.php");
-        include("./pages/content.php");
         if(isset($_GET['action'])){
             $tam = $_GET['action'];
         }
@@ -31,6 +30,18 @@
         }
         if($tam=='works'){
             include("./pages/Worklist.php");
+    
+        }
+        if($tam=='task'){
+            include("./pages/Task.php");
+    
+        }
+        if($tam=='home'){
+            include("./pages/home.php");
+    
+        }
+        if($tam=='support'){
+            include("./pages/support.php");
     
         }
         

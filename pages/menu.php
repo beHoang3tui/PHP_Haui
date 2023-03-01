@@ -9,25 +9,34 @@
     </div>
     <nav class="menu">
         <ul>
-            <li><a href="#">WordSpace</a><i class="fa-solid fa-angle-down"></i>
+            <li><a href="#">Project</a><i class="fa-solid fa-angle-down"></i>
                 <!-- your work -->
                 <?php 
-                $sql = "SELECT * FROM project";
+                    if(isset($_SESSION['email'])){
+                ?>
+                <?php 
+                $sql1 = "SELECT user.idDepartment as idD FROM user JOIN department ON  department.idDepartment=user.idDepartment WHERE emailUser = '".$_SESSION['email']."'";
+                $query1 = mysqli_query($con,$sql1);
+                $row1 = mysqli_fetch_array($query1);
+                $sql = "SELECT * FROM project JOIN department ON department.idDepartment = project.idDepartment WHERE project.idDepartment='".$row1['idD']."'";
                 $query = mysqli_query($con,$sql); 
             ?>
-                <ul>
+                <ul class="down_menu">
                     <?php 
                     $i = 0;
                     while($row= mysqli_fetch_array($query)){
                         $i++;
                 ?>
-                    <li><a href="#"><?php echo $row['nameProject']?></a></li>
+                    <li><a
+                            href="index.php?action=detail&idProject=<?php echo $row['idProject'] ?>"><?php echo $row['nameProject']?></a>
+                    </li>
                     <?php 
                     }
                 ?>
                 </ul>
+                <?php }?>
             </li>
-            <li><a href="#">Create</a></li>
+            <li><a href="index.php?action=support">Support</a></li>
         </ul>
     </nav>
     <?php 
@@ -54,3 +63,6 @@
     ?>
     </div>
 </div>
+<?php 
+    include("./pages/content.php");
+?>

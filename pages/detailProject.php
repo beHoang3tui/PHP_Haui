@@ -17,6 +17,6 @@
         $query1 = mysqli_query($con,$sql1); 
         $row1 = mysqli_fetch_array($query1);
     ?>
-        <a href="index.php?action=works&idProject=<?php echo $row1['idWorks'] ?>">Xem công việc</a>
+        <a href="index.php?action=works&idPWorks=<?php echo $row['idProject'] ?>"><button>Xem công việc</button></a>
     </div>
 </div>
