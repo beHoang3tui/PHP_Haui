@@ -5,7 +5,7 @@ $sql_select = mysqli_query($con, $sql);
 if (isset($_GET['query']) && $_GET['query'] == 'xoa') {
     $id = $_GET['idProDoc'];
     $sql_xoa = "DELETE FROM project_document WHERE idProDoc = '" . $id . "'";
-    mysqli_query($con, $sql_xoa);
+    $query = mysqli_query($con, $sql_xoa);
 }
 if (isset($_POST['sua']) && $_GET['query'] == 'sua') {
     $name = $_POST['nameDepartment'];
